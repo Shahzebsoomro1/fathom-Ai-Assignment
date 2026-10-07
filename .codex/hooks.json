@@ -1,0 +1,7 @@
+{
+  "description": "Capture only verbatim user prompts and final assistant responses for the 8x assignment.",
+  "hooks": {
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:/Users/user/Desktop/Fantom-Ai-Assignment/scripts/capture.ps1\" -Hook", "timeout": 30}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:/Users/user/Desktop/Fantom-Ai-Assignment/scripts/capture.ps1\" -Hook", "timeout": 30}]}]
+  }
+}
