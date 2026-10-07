@@ -6,6 +6,6 @@
   "scripts": {
     "dev": "node frontend/server.mjs",
     "start": "node frontend/server.mjs",
-    "check": "node --check dist/app.js && node --check frontend/server.mjs"
+    "check": "node --check dist/app.js && node --check dist/auth.js && node --check dist/local-navigation.js && node --check frontend/server.mjs"
   }
 }

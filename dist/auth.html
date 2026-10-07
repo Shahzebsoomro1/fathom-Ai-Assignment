@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Sign up for Fathom</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preload" href="/assets/sora-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/auth.css">
+  <script src="/auth.js" defer></script>
+</head>
+<body>
+  <section id="auth-screen" class="auth-screen">
+    <header class="auth-header"><a href="/" aria-label="Fathom home"><img src="/assets/logo.svg" alt="Fathom" width="224" height="34"></a></header>
+    <main class="auth-layout">
+      <section class="auth-card" aria-labelledby="auth-title">
+        <div class="auth-emoji" aria-hidden="true">🚀</div>
+        <h1 id="auth-title">Sign up for Fathom</h1>
+        <p class="auth-subtitle">Connect your work email to get started in minutes</p>
+        <div class="provider-buttons">
+          <button class="provider-button" data-provider="google" type="button">
+            <svg class="provider-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285f4" d="M43.61 24.46c0-1.36-.12-2.66-.35-3.92H24v7.43h11a9.4 9.4 0 0 1-4.08 6.2v5.15h6.61c3.87-3.56 6.08-8.8 6.08-14.86Z"/><path fill="#34a853" d="M24 44c5.51 0 10.13-1.82 13.51-4.98l-6.61-5.15c-1.83 1.23-4.17 1.98-6.9 1.98-5.33 0-9.85-3.59-11.47-8.44H5.71v5.31A20.4 20.4 0 0 0 24 44Z"/><path fill="#fbbc05" d="M12.53 27.41A12.32 12.32 0 0 1 11.9 24c0-1.19.21-2.34.63-3.41v-5.31H5.71A20.16 20.16 0 0 0 3.6 24c0 3.3.8 6.42 2.11 8.72l6.82-5.31Z"/><path fill="#ea4335" d="M24 12.15c3 0 5.68 1.03 7.8 3.05l5.84-5.84C34.11 6.06 29.51 4 24 4A20.4 20.4 0 0 0 5.71 15.28l6.82 5.31C14.15 15.74 18.67 12.15 24 12.15Z"/></svg>
+            <span class="provider-label">Continue with Google</span><span class="loading-spinner" hidden aria-hidden="true"></span>
+          </button>
+          <button class="provider-button" data-provider="microsoft" type="button">
+            <svg class="provider-logo microsoft-logo" viewBox="0 0 21 21" aria-hidden="true"><path fill="#f25022" d="M0 0h10v10H0z"/><path fill="#7fba00" d="M11 0h10v10H11z"/><path fill="#00a4ef" d="M0 11h10v10H0z"/><path fill="#ffb900" d="M11 11h10v10H11z"/></svg>
+            <span class="provider-label">Continue with Microsoft</span><span class="loading-spinner" hidden aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="auth-toggle"><span id="auth-toggle-copy">Already have a Fathom account?</span> <a id="auth-toggle-link" href="/login" data-route>Sign in</a></p>
+        <p class="auth-terms">By using Fathom, you agree to the <a href="https://www.fathom.ai/terms">Terms of Service</a> and <a href="https://www.fathom.ai/privacy">Privacy Policy</a>.</p>
+        <p id="auth-status" class="sr-only" role="status" aria-live="polite"></p>
+      </section>
+      <aside class="auth-testimonial" aria-label="Customer testimonial"><span class="quote-open" aria-hidden="true">“</span><blockquote><p>'Work smarter, not harder,' they said.<br><strong>Fathom took it personally.</strong></p><footer><strong>Rosanne K.</strong><br>Executive</footer></blockquote><span class="quote-close" aria-hidden="true">”</span></aside>
+    </main>
+  </section>
+  <section id="dashboard-screen" class="dashboard-screen" hidden aria-label="Fathom workspace">
+    <header class="workspace-header"><a href="/" class="workspace-brand" aria-label="Fathom home"><img src="/assets/logo.svg" alt="Fathom" width="177" height="27"></a><label class="workspace-search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search Call Recordings" aria-label="Search call recordings"></label><div class="workspace-actions"><button data-panel="refer"><span aria-hidden="true">♧</span> Refer</button><button data-panel="settings"><span aria-hidden="true">⚙</span> Settings</button><button data-panel="help"><span aria-hidden="true">◉</span> Help & Feedback</button><span class="workspace-points"><span aria-hidden="true">★</span> 20</span><button class="profile-button" data-panel="profile" aria-label="Open account menu">S</button></div></header>
+    <nav class="workspace-tabs" aria-label="Workspace views"><a href="/dashboard" data-view="my-calls" data-route aria-current="page">My Calls</a><a href="/dashboard?view=team-calls" data-view="team-calls" data-route>Team Calls</a><a href="/dashboard?view=playlists" data-view="playlists" data-route>Playlists</a><a href="/dashboard?view=alerts" data-view="alerts" data-route>Alerts</a><a href="/dashboard?view=deals" data-view="deals" data-route>Deals</a></nav>
+    <div class="workspace-layout">
+      <main class="calls-panel"><div class="calls-empty"><span class="empty-circle" aria-hidden="true">╱</span><p id="calls-empty-label">No call recordings</p></div><section class="learning-panel" id="learning-panel" hidden aria-labelledby="learning-title"><h2 id="learning-title">LEARN HOW TO USE FATHOM</h2><div class="lesson-cards"><button data-lesson="tutorial"><span class="lesson-image lesson-one"></span><span class="lesson-label">▱ &nbsp; Self-Guided Tutorial</span></button><button data-lesson="test"><span class="lesson-image lesson-two"></span><span class="lesson-label">▶ &nbsp; Start Test Call</span></button><button data-lesson="webinar"><span class="lesson-image lesson-three"></span><span class="lesson-label">▣ &nbsp; Attend Tips & Tricks Webinar</span></button></div><h2>MEETING PREFERENCES</h2><p><span>✓</span> Choose when Fathom records your meetings in Settings.</p><p><span>✓</span> Manage sharing preferences before your first meeting.</p></section><button class="onboarding-guide" id="onboarding-guide"><span class="guide-avatar" aria-hidden="true"></span><span>Start your onboarding here!</span></button></main>
+      <aside class="ask-panel" aria-labelledby="ask-title"><div class="ask-heading"><h2 id="ask-title"><span aria-hidden="true">✧</span> <span>ASK</span> FATHOM</h2><button id="collapse-ask" aria-label="Collapse Ask Fathom panel">◧</button></div><div class="ask-announcement"><strong>🎁 Account-level Ask Fathom is here!</strong> We're gifting you unlimited use until Nov 1. Limits may apply after. <a href="https://help.fathom.video/">Learn More</a></div><div class="ask-conversation" aria-live="polite"></div><div class="ask-suggestions"><button>Write me a note of encouragement</button><button>Next steps on projects?</button><button>Summarize my meetings from this week</button></div><form class="ask-composer"><label class="sr-only" for="ask-input">Ask Fathom</label><textarea id="ask-input" placeholder="Ask anything..." rows="2"></textarea><div><select aria-label="Meetings to search"><option>My Calls</option><option>Team Calls</option></select><button type="submit" aria-label="Send question">↑</button></div></form></aside>
+    </div><button id="expand-ask" class="expand-ask" hidden>✧ Ask Fathom</button>
+    <dialog class="workspace-dialog" id="workspace-dialog"><button class="dialog-close" aria-label="Close dialog">×</button><h2 id="workspace-dialog-title"></h2><div id="workspace-dialog-content"></div></dialog>
+  </section>
+</body>
+</html>
