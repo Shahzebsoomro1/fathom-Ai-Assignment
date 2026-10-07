@@ -1,14 +1,16 @@
 param(
     [switch]$Watch,
     [switch]$Hook,
+    [switch]$NoCommit,
     [string]$TranscriptPath,
+    [string]$LogRoot,
     [string]$SessionRoot = 'C:\Users\user\.codex\sessions'
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $settings = Get-Content -LiteralPath (Join-Path $projectRoot 'capture-settings.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $utf8 = New-Object System.Text.UTF8Encoding($false)
-$logRoot = Join-Path $projectRoot '.agent-logs'
+if (-not $LogRoot) { $LogRoot = Join-Path $projectRoot '.agent-logs' }
 [IO.Directory]::CreateDirectory($logRoot) | Out-Null
 [IO.Directory]::CreateDirectory((Join-Path $projectRoot '.capture-runtime')) | Out-Null
 
@@ -17,14 +19,16 @@ function Sync-Transcript([string]$Path) {
     $reader = New-Object IO.StreamReader($stream, $utf8)
     try {
         $firstLine = $reader.ReadLine()
+        if (-not $firstLine) { return }
+        $meta = $firstLine | ConvertFrom-Json
+        if ($meta.type -ne 'session_meta') { return }
+        # Guardian/approval-review and delegated transcripts are not user sessions.
+        if ($meta.payload.source -isnot [string] -or $meta.payload.source -notin @('vscode','cli','exec')) { return }
+        $cwd = [IO.Path]::GetFullPath($meta.payload.cwd).TrimEnd('\','/')
+        $root = [IO.Path]::GetFullPath($projectRoot).TrimEnd('\','/')
+        if ($cwd -ne $root -and -not $cwd.StartsWith($root + '\', [StringComparison]::OrdinalIgnoreCase)) { return }
         $remaining = $reader.ReadToEnd()
     } finally { $reader.Dispose() }
-    if (-not $firstLine) { return }
-    $meta = $firstLine | ConvertFrom-Json
-    if ($meta.type -ne 'session_meta') { return }
-    $cwd = [IO.Path]::GetFullPath($meta.payload.cwd).TrimEnd('\','/')
-    $root = [IO.Path]::GetFullPath($projectRoot).TrimEnd('\','/')
-    if ($cwd -ne $root -and -not $cwd.StartsWith($root + '\', [StringComparison]::OrdinalIgnoreCase)) { return }
     $records = New-Object System.Collections.Generic.List[object]
     $lines = @($firstLine) + @($remaining -split "`n" | Where-Object { $_.Length -gt 0 })
     foreach ($line in $lines) {
@@ -115,7 +119,7 @@ function Sync-Transcript([string]$Path) {
     }
     # Only session summary fields change; existing entry bytes must remain identical.
     [IO.File]::WriteAllText($path, $header + $bodyText, $utf8)
-    if ($settings.auto_commit -and @($entries | Where-Object Type -eq 'RESPONSE').Count -gt 0) {
+    if ($settings.auto_commit -and -not $NoCommit -and @($entries | Where-Object Type -eq 'RESPONSE').Count -gt 0) {
         $gitArgs = @('-c', ('safe.directory=' + $projectRoot.Replace('\','/')), '-C', $projectRoot)
         & git @gitArgs add -- '.agent-logs' | Out-Null
         if ($LASTEXITCODE -ne 0) { throw 'Could not stage capture logs.' }
