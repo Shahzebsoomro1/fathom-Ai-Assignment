@@ -1,0 +1,11 @@
+{
+  "name": "fathom-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node frontend/server.mjs",
+    "start": "node frontend/server.mjs",
+    "check": "node --check dist/app.js && node --check frontend/server.mjs"
+  }
+}

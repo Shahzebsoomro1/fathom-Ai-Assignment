@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-07T17:15:52.150Z",
+  "browser": "Microsoft Edge via DevTools Protocol",
+  "url": "http://127.0.0.1:4173",
+  "checks": [
+    "Landing hero rendered",
+    "All images load (0 missing: )",
+    "Local brand fonts load",
+    "Individuals tab changes content",
+    "Carousel next changes the selected feature",
+    "Workflow tab changes the illustration",
+    "Navigation dropdown opens",
+    "Escape closes the navigation dropdown",
+    "No horizontal overflow at 1917px",
+    "No horizontal overflow at 1440px",
+    "No horizontal overflow at 1024px",
+    "No horizontal overflow at 768px",
+    "No horizontal overflow at 390px",
+    "Mobile navigation opens",
+    "Mobile navigation closes after selection",
+    "No horizontal overflow at 320px",
+    "No browser runtime errors (0)"
+  ],
+  "browserErrors": []
+}
