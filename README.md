@@ -1,4 +1,4 @@
-# Fathom frontend recreation
+# Fathom  recreation
 
 The first completed milestone is the public landing page, based on the supplied
 Fathom reference screenshots. It includes the starfield hero, original artwork and
