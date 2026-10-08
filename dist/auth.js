@@ -38,6 +38,7 @@ function renderRoute() {
   });
   const labels = { 'my-calls': 'No call recordings', 'team-calls': 'No team call recordings', playlists: 'No playlists', alerts: 'No alerts', deals: 'No deals' };
   document.querySelector('#calls-empty-label').textContent = labels[view] || labels['my-calls'];
+  updateRecordings();
   if (dashboard) document.querySelector('.workspace-tabs [aria-current=page]')?.focus({ preventScroll: true });
 }
 
@@ -114,7 +115,15 @@ document.querySelector('.ask-composer').addEventListener('submit', event => {
   const answer = document.createElement('p'); answer.className = 'ask-message answer'; answer.textContent = 'There are no recorded meetings in this workspace yet. Record your first call to explore summaries and insights.';
   conversation.append(prompt, answer); askInput.value = ''; conversation.scrollTop = conversation.scrollHeight;
 });
-document.querySelector('.workspace-search input').addEventListener('input', event => {
-  document.querySelector('#calls-empty-label').textContent = event.target.value.trim() ? 'No matching call recordings' : 'No call recordings';
-});
+function updateRecordings() {
+  const view = new URLSearchParams(location.search).get('view') || 'my-calls';
+  const myCalls = view === 'my-calls';
+  const query = document.querySelector('.workspace-search input').value.trim().toLowerCase();
+  let matches = 0;
+  document.querySelectorAll('.recording-card').forEach(card => { card.hidden = !card.textContent.toLowerCase().includes(query); if (!card.hidden) matches++; });
+  document.querySelector('.meeting-recordings').hidden = !myCalls;
+  document.querySelector('.calls-empty').hidden = myCalls && matches > 0;
+  if (myCalls) document.querySelector('#calls-empty-label').textContent = query ? 'No matching call recordings' : 'No call recordings';
+}
+document.querySelector('.workspace-search input').addEventListener('input', updateRecordings);
 renderRoute();

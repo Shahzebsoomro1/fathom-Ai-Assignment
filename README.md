@@ -20,19 +20,25 @@ the existing hosted preview. That preview predates the user's local-only instruc
 
 ## Run locally
 
-Requires Node.js 22 or later. There are no dependencies to install.
+Requires Node.js 22 or later. The React workspace uses the dependencies pinned in
+`package-lock.json`.
 
 ```sh
+npm install
 npm run dev
 ```
 
 Open http://127.0.0.1:4173. Set `PORT` to choose a different port.
+The meeting workspace now uses React, React DOM, and esbuild. Install the pinned
+dependencies with `npm install` if they are not present. `npm run dev` builds and
+watches the React source; `npm run build` performs a local build only.
 
 Auth routes: http://127.0.0.1:4173/signup and http://127.0.0.1:4173/login.
 Both provider buttons navigate to http://127.0.0.1:4173/dashboard.
 
-The source is directly deployable static HTML, CSS, and JavaScript in `dist/`.
-`frontend/server.mjs` provides the local development server.
+The landing/auth source and compiled meeting workspace are in `dist/`.
+Modular meeting components, hooks, JSON fixtures, and styles live in
+`frontend/meeting/`. `frontend/server.mjs` provides the local development server.
 
 ## Verification
 
@@ -52,13 +58,32 @@ responsive layouts at 1440, 768, 390, and 320px. The simulated flow made zero ex
 OAuth/network requests. See `recon/AUTH-QA.json`, `scripts/auth-qa.mjs`, and the
 `auth-*.png` verification screenshots.
 
+The post-call workspace passed browser and data checks for playback, audio/video
+mode switching, keyboard tabs, seeking, transcript search and speaker filtering,
+summary templates, source-linked chat, action statuses, notes, local Jira drafts,
+reload persistence, and the complete one-hour fixture. Its checks made zero external
+requests. See `recon/MEETING-QA.json` and `scripts/meeting-qa.mjs`.
+
+The Jira flow now uses an editable side drawer with 400ms autosave, retained AI
+originals, suggested-field labels, owner/assigned-by separation, conservative date
+resolution, recoverable dismissal with Undo, duplicate-safe simulated ticket keys,
+and persistent sequential batch review. See `recon/JIRA-WORKFLOW-QA.json` and
+`frontend/meeting/README.md`. No changes were deployed or published.
+
 ## Scope and reference material
 
-The landing page and simulated auth flow are implemented. The dashboard currently
-provides the reference's empty workspace as the auth destination, with navigation,
-the Ask Fathom empty state, and the onboarding entry point. Full calendar integration,
-meeting playback, transcript, summaries, action items, meeting search, and clip-sharing
-flows remain future milestones. Signup/login links stay within the local clone;
+The third milestone implements the post-call React workspace. Open
+http://127.0.0.1:4173/meetings/discovery or
+http://127.0.0.1:4173/meetings/launch-review. The dashboard now lists both sample calls.
+Playback, source-linked transcript search/filtering, summary templates, instant
+transcript-grounded mock chat, action statuses, local Jira drafts, and timestamped
+annotations work. The full-hour fixture has eight participants and 96 segments.
+See `frontend/meeting/README.md` for the component map and an honest walkthrough
+of the simulated capture, media, AI, and integration layers.
+
+The landing page, simulated auth flow, dashboard recording list, and post-call
+workspace are implemented. Real calendar/capture integrations, live media, hosted
+AI, and external clip-sharing remain future milestones. Signup/login links stay within the local clone;
 external resource links still point to the original product's verified public URLs.
 No real meeting capture or authentication backend is claimed or provided.
 

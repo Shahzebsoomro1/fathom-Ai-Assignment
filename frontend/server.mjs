@@ -10,7 +10,8 @@ const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
     const routes = { '/': '/index.html', '/signup': '/auth.html', '/login': '/auth.html', '/dashboard': '/auth.html', '/app': '/auth.html' };
-    const file = path.resolve(root, '.' + decodeURIComponent(routes[url.pathname] || url.pathname));
+    const meetingRoute = /^\/meetings(?:\/[^/]+)?\/?$/.test(url.pathname);
+    const file = path.resolve(root, '.' + decodeURIComponent(meetingRoute ? '/meeting.html' : routes[url.pathname] || url.pathname));
     if (!file.startsWith(root + path.sep)) { res.writeHead(403).end('Forbidden'); return; }
     const content = await fs.readFile(file);
     res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff' });

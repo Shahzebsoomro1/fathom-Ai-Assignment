@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "discovery",
+    "title": "ThinkBionics · Product discovery",
+    "subtitle": "Pilot planning & next steps",
+    "date": "2026-10-07T08:00:00Z",
+    "duration": 126,
+    "platform": "Google Meet",
+    "speakers": [
+      {
+        "id": "yash",
+        "name": "Yash Verma",
+        "handle": "@yvsrcld",
+        "initials": "YV",
+        "role": "Product lead",
+        "color": "#00b9d9"
+      },
+      {
+        "id": "anya",
+        "name": "Anya Rose",
+        "handle": "@anya",
+        "initials": "AR",
+        "role": "Customer success",
+        "color": "#b483e8"
+      },
+      {
+        "id": "lily",
+        "name": "Lily Chen",
+        "handle": "@lilychen",
+        "initials": "LC",
+        "role": "Engineering",
+        "color": "#edaa69"
+      },
+      {
+        "id": "jordan",
+        "name": "Jordan Miles",
+        "handle": "@jordan",
+        "initials": "JM",
+        "role": "Design",
+        "color": "#7abb9b"
+      }
+    ],
+    "transcript": [
+      {
+        "id": "discovery-1",
+        "speakerId": "yash",
+        "start": 0,
+        "end": 9,
+        "text": "Thanks for joining. Today we are aligning on the ThinkBionics pilot: a searchable meeting workspace, reliable summaries, and clear next steps.",
+        "tags": ["overview"]
+      },
+      {
+        "id": "discovery-2",
+        "speakerId": "anya",
+        "start": 9,
+        "end": 19,
+        "text": "Our customer success team loses context between discovery and implementation. We need every promise to have an owner and a link back to the conversation.",
+        "tags": ["customer", "requirements"]
+      },
+      {
+        "id": "discovery-3",
+        "speakerId": "yash",
+        "start": 19,
+        "end": 29,
+        "text": "The key requirement is traceability. Every action item and note should link to the exact moment in the recording, so nobody has to rewatch the entire call.",
+        "tags": ["highlight", "requirements"]
+      },
+      {
+        "id": "discovery-4",
+        "speakerId": "lily",
+        "start": 29,
+        "end": 39,
+        "text": "We can support timestamped transcripts and a Jira issue draft in the first pilot. A real Jira connection will require a separate permissions review.",
+        "tags": ["jira", "scope", "risk"]
+      },
+      {
+        "id": "discovery-5",
+        "speakerId": "jordan",
+        "start": 39,
+        "end": 50,
+        "text": "For the interface, keep the recording on the left and action items on the right. Transcript, summary, and Ask Fathom should stay one click away.",
+        "tags": ["design"]
+      },
+      {
+        "id": "discovery-6",
+        "speakerId": "anya",
+        "start": 50,
+        "end": 61,
+        "text": "Can the team search by speaker and ask who owns the follow-up? That is especially useful after an hour-long call with eight people.",
+        "tags": ["search", "question"]
+      },
+      {
+        "id": "discovery-7",
+        "speakerId": "yash",
+        "start": 61,
+        "end": 73,
+        "text": "Agreed. We will ship transcript search, speaker filters, and source-linked answers in the pilot. The beta review is Monday, October 12.",
+        "tags": ["decision", "deadline"]
+      },
+      {
+        "id": "discovery-8",
+        "speakerId": "lily",
+        "start": 73,
+        "end": 84,
+        "text": "I will prepare the transcript import and review the Jira permissions checklist by Friday, October 9. The tracking issue is FAT-142.",
+        "tags": ["action", "jira", "deadline"]
+      },
+      {
+        "id": "discovery-9",
+        "speakerId": "jordan",
+        "start": 84,
+        "end": 95,
+        "text": "I will finish the split-view prototype and check its mobile layout by Friday. I will also document how notes jump back into playback.",
+        "tags": ["action", "design"]
+      },
+      {
+        "id": "discovery-10",
+        "speakerId": "anya",
+        "start": 95,
+        "end": 106,
+        "text": "I will invite the customer success pilot group on Monday and gather feedback on summary quality. Let us keep sharing private until the access review is finished. The customer success team should prepare a rollout checklist after launch.",
+        "tags": ["action", "privacy"]
+      },
+      {
+        "id": "discovery-11",
+        "speakerId": "lily",
+        "start": 106,
+        "end": 116,
+        "text": "One risk remains: Jira permissions may take longer than the UI work. We can validate local issue drafts without sending anything to Jira. Someone should review the AI summary by Friday.",
+        "tags": ["risk", "jira"]
+      },
+      {
+        "id": "discovery-12",
+        "speakerId": "yash",
+        "start": 116,
+        "end": 126,
+        "text": "Perfect. Our decisions are clear: a Monday beta review, traceable notes, and a private pilot. Thanks everyone; the summary and owners will be ready for follow-up.",
+        "tags": ["decision", "summary"]
+      }
+    ],
+    "chapters": [
+      {
+        "time": 0,
+        "title": "Goals & customer needs"
+      },
+      {
+        "time": 29,
+        "title": "Pilot scope"
+      },
+      {
+        "time": 61,
+        "title": "Decisions & owners"
+      },
+      {
+        "time": 106,
+        "title": "Risks & next steps"
+      }
+    ],
+    "summary": {
+      "overview": "The team aligned on a private, traceable meeting-workspace pilot, with a beta review on Monday, October 12.",
+      "highlights": [
+        {
+          "text": "Link action items and notes to the exact moment in the recording.",
+          "time": 19
+        },
+        {
+          "text": "Include transcript search, speaker filters, and source-linked answers in the pilot.",
+          "time": 61
+        },
+        {
+          "text": "Use local Jira drafts while the permissions review is pending.",
+          "time": 106
+        }
+      ],
+      "decisions": [
+        {
+          "text": "Run the beta review on Monday, October 12.",
+          "time": 61
+        },
+        {
+          "text": "Keep pilot sharing private until the access review is complete.",
+          "time": 95
+        }
+      ],
+      "risks": [
+        {
+          "text": "Jira permissions may take longer than the UI work.",
+          "time": 106
+        }
+      ],
+      "templates": {
+        "sales": [
+          {
+            "title": "Customer needs",
+            "text": "Customer success needs searchable context, owners for every commitment, and links back to the recording.",
+            "time": 9
+          },
+          {
+            "title": "Success criteria",
+            "text": "A private pilot with traceable notes, source-linked answers, and a Monday beta review.",
+            "time": 61
+          }
+        ],
+        "engineering": [
+          {
+            "title": "Implementation scope",
+            "text": "Transcript search, speaker filters, playback-linked notes, and local Jira issue drafts.",
+            "time": 29
+          },
+          {
+            "title": "Dependencies",
+            "text": "Review Jira permissions separately; keep sharing private until the access review is complete.",
+            "time": 106
+          }
+        ]
+      }
+    },
+    "actionItems": [
+      {
+        "id": "a1",
+        "text": "Prepare transcript import and Jira permissions checklist",
+        "speakerId": "lily",
+        "due": "Fri, Oct 9",
+        "status": "in-progress",
+        "time": 73,
+        "jira": {
+          "key": "FAT-142",
+          "project": "FAT",
+          "status": "In progress"
+        },
+        "ownerId": "lily",
+        "assignedById": "lily",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday, October 9",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "a2",
+        "text": "Finish the split-view prototype and mobile review",
+        "speakerId": "jordan",
+        "due": "Fri, Oct 9",
+        "status": "todo",
+        "time": 84,
+        "jira": null,
+        "ownerId": "jordan",
+        "assignedById": "jordan",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "a3",
+        "text": "Invite the customer success pilot group and collect feedback",
+        "speakerId": "anya",
+        "due": "Mon, Oct 12",
+        "status": "todo",
+        "time": 95,
+        "jira": null,
+        "ownerId": "anya",
+        "assignedById": "anya",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Monday",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "a4",
+        "text": "Prepare the rollout checklist",
+        "ownerId": null,
+        "assignedById": "anya",
+        "speakerId": "anya",
+        "ownerSuggestion": "Customer success team",
+        "ownerSuggested": true,
+        "duePhrase": "after launch",
+        "due": "after launch",
+        "priority": "Medium",
+        "prioritySuggested": true,
+        "status": "todo",
+        "time": 95,
+        "jira": null
+      },
+      {
+        "id": "a5",
+        "text": "Review the AI summary",
+        "ownerId": null,
+        "assignedById": "lily",
+        "speakerId": "lily",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday",
+        "due": "Friday",
+        "priority": "Medium",
+        "prioritySuggested": true,
+        "status": "todo",
+        "time": 106,
+        "jira": null
+      }
+    ],
+    "annotations": [
+      {
+        "id": "n1",
+        "type": "note",
+        "time": 19,
+        "speakerId": "yash",
+        "text": "Every action and note needs a direct link back to the recording. Traceability is the priority."
+      },
+      {
+        "id": "n2",
+        "type": "decision",
+        "time": 61,
+        "speakerId": "yash",
+        "text": "Pilot scope agreed: transcript search, speaker filters, and answers with sources."
+      },
+      {
+        "id": "n3",
+        "type": "risk",
+        "time": 106,
+        "speakerId": "lily",
+        "text": "Jira access review is still pending. Validate local drafts first."
+      }
+    ],
+    "timeZone": "Asia/Karachi"
+  },
+  {
+    "id": "launch-review",
+    "title": "Q4 launch readiness · Weekly team sync",
+    "subtitle": "Product, engineering & customer success",
+    "date": "2026-10-07T09:00:00Z",
+    "duration": 3600,
+    "platform": "Google Meet",
+    "speakers": [
+      {
+        "id": "yash",
+        "name": "Yash Verma",
+        "handle": "@yvsrcld",
+        "initials": "YV",
+        "role": "Product lead",
+        "color": "#00b9d9"
+      },
+      {
+        "id": "anya",
+        "name": "Anya Rose",
+        "handle": "@anya",
+        "initials": "AR",
+        "role": "Customer success",
+        "color": "#b483e8"
+      },
+      {
+        "id": "lily",
+        "name": "Lily Chen",
+        "handle": "@lilychen",
+        "initials": "LC",
+        "role": "Engineering",
+        "color": "#edaa69"
+      },
+      {
+        "id": "jordan",
+        "name": "Jordan Miles",
+        "handle": "@jordan",
+        "initials": "JM",
+        "role": "Design",
+        "color": "#7abb9b"
+      },
+      {
+        "id": "priya",
+        "name": "Priya Shah",
+        "handle": "@priya",
+        "initials": "PS",
+        "role": "Quality assurance",
+        "color": "#d47ba3"
+      },
+      {
+        "id": "sam",
+        "name": "Sam Rivera",
+        "handle": "@sam",
+        "initials": "SR",
+        "role": "Security",
+        "color": "#8294e9"
+      },
+      {
+        "id": "omar",
+        "name": "Omar Khan",
+        "handle": "@omar",
+        "initials": "OK",
+        "role": "Platform",
+        "color": "#d8ba64"
+      },
+      {
+        "id": "alex",
+        "name": "Alex Morgan",
+        "handle": "@alex",
+        "initials": "AM",
+        "role": "Operations",
+        "color": "#88b3c4"
+      }
+    ],
+    "transcript": [
+      {
+        "id": "launch-1",
+        "speakerId": "yash",
+        "start": 0,
+        "end": 37.5,
+        "text": "The October launch needs a focused private beta. The goal is to make meeting follow-through measurable, rather than add another place for notes.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-2",
+        "speakerId": "anya",
+        "start": 37.5,
+        "end": 75,
+        "text": "Customers want owners and deadlines next to every commitment. Three pilot teams will evaluate search, summaries, and the hand-off to their issue tracker.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-3",
+        "speakerId": "lily",
+        "start": 75,
+        "end": 112.5,
+        "text": "The platform can support transcript import and timestamped playback in the beta. We should verify long-call performance before adding more integrations.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-4",
+        "speakerId": "jordan",
+        "start": 112.5,
+        "end": 150,
+        "text": "The new workspace keeps the player, transcript, and next steps together. We will test the layout on a laptop and a narrow mobile screen.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-5",
+        "speakerId": "priya",
+        "start": 150,
+        "end": 187.5,
+        "text": "Our acceptance checklist includes all eight speakers, correct source citations, and consistent playback at 0.75x, 1x, 1.5x, and 2x.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-6",
+        "speakerId": "sam",
+        "start": 187.5,
+        "end": 225,
+        "text": "The pilot remains private. A copied local preview link is not an invitation to a real external recording, and integration access needs its own review.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-7",
+        "speakerId": "omar",
+        "start": 225,
+        "end": 262.5,
+        "text": "I will measure transcript search with a full sixty-minute fixture. Filtering must not reset the recording position or change which meeting is open.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-8",
+        "speakerId": "alex",
+        "start": 262.5,
+        "end": 300,
+        "text": "Let us make Monday, October 12 the beta review. We will decide whether to expand the pilot after checking the action items and customer feedback.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-9",
+        "speakerId": "yash",
+        "start": 300,
+        "end": 337.5,
+        "text": "The October launch needs a focused private beta. The goal is to make meeting follow-through measurable, rather than add another place for notes. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-10",
+        "speakerId": "anya",
+        "start": 337.5,
+        "end": 375,
+        "text": "Customers want owners and deadlines next to every commitment. Three pilot teams will evaluate search, summaries, and the hand-off to their issue tracker. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-11",
+        "speakerId": "lily",
+        "start": 375,
+        "end": 412.5,
+        "text": "The platform can support transcript import and timestamped playback in the beta. We should verify long-call performance before adding more integrations. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-12",
+        "speakerId": "jordan",
+        "start": 412.5,
+        "end": 450,
+        "text": "The new workspace keeps the player, transcript, and next steps together. We will test the layout on a laptop and a narrow mobile screen. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-13",
+        "speakerId": "priya",
+        "start": 450,
+        "end": 487.5,
+        "text": "Our acceptance checklist includes all eight speakers, correct source citations, and consistent playback at 0.75x, 1x, 1.5x, and 2x. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-14",
+        "speakerId": "sam",
+        "start": 487.5,
+        "end": 525,
+        "text": "The pilot remains private. A copied local preview link is not an invitation to a real external recording, and integration access needs its own review. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-15",
+        "speakerId": "omar",
+        "start": 525,
+        "end": 562.5,
+        "text": "I will measure transcript search with a full sixty-minute fixture. Filtering must not reset the recording position or change which meeting is open. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-16",
+        "speakerId": "alex",
+        "start": 562.5,
+        "end": 600,
+        "text": "Let us make Monday, October 12 the beta review. We will decide whether to expand the pilot after checking the action items and customer feedback. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-17",
+        "speakerId": "yash",
+        "start": 600,
+        "end": 637.5,
+        "text": "Timestamp accuracy is our first quality gate. Clicking a transcript citation should seek to the correct second without losing the selected tab.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-18",
+        "speakerId": "anya",
+        "start": 637.5,
+        "end": 675,
+        "text": "A customer said finding the original promise matters more than a polished summary. We need speaker names, handles, and readable paragraphs in the transcript.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-19",
+        "speakerId": "lily",
+        "start": 675,
+        "end": 712.5,
+        "text": "Each transcript row will have a start and end time. Playback should highlight the active row, and manual search should not keep pulling the user away.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-20",
+        "speakerId": "jordan",
+        "start": 712.5,
+        "end": 750,
+        "text": "Follow-playback should be an explicit control. Notes and highlights can share the same timeline navigation so the behavior feels consistent.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-21",
+        "speakerId": "priya",
+        "start": 750,
+        "end": 787.5,
+        "text": "I will check the first second, the last second, and the transition between speakers. We also need a graceful empty state for a filter with no results.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-22",
+        "speakerId": "sam",
+        "start": 787.5,
+        "end": 825,
+        "text": "The transcript is supplied mock data for this pilot. We should not confuse the local playback simulation with a captured customer recording.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-23",
+        "speakerId": "omar",
+        "start": 825,
+        "end": 862.5,
+        "text": "Search must match speaker handles and sentence content. We should preserve the exact timestamp when a user switches between video and audio mode.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-24",
+        "speakerId": "alex",
+        "start": 862.5,
+        "end": 900,
+        "text": "We agree that source-linked navigation is part of the beta, not a later enhancement. Export and live recording can stay outside the capture layer for now.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-25",
+        "speakerId": "yash",
+        "start": 900,
+        "end": 937.5,
+        "text": "Timestamp accuracy is our first quality gate. Clicking a transcript citation should seek to the correct second without losing the selected tab. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-26",
+        "speakerId": "anya",
+        "start": 937.5,
+        "end": 975,
+        "text": "A customer said finding the original promise matters more than a polished summary. We need speaker names, handles, and readable paragraphs in the transcript. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-27",
+        "speakerId": "lily",
+        "start": 975,
+        "end": 1012.5,
+        "text": "Each transcript row will have a start and end time. Playback should highlight the active row, and manual search should not keep pulling the user away. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-28",
+        "speakerId": "jordan",
+        "start": 1012.5,
+        "end": 1050,
+        "text": "Follow-playback should be an explicit control. Notes and highlights can share the same timeline navigation so the behavior feels consistent. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-29",
+        "speakerId": "priya",
+        "start": 1050,
+        "end": 1087.5,
+        "text": "I will check the first second, the last second, and the transition between speakers. We also need a graceful empty state for a filter with no results. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-30",
+        "speakerId": "sam",
+        "start": 1087.5,
+        "end": 1125,
+        "text": "The transcript is supplied mock data for this pilot. We should not confuse the local playback simulation with a captured customer recording. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-31",
+        "speakerId": "omar",
+        "start": 1125,
+        "end": 1162.5,
+        "text": "Search must match speaker handles and sentence content. We should preserve the exact timestamp when a user switches between video and audio mode. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-32",
+        "speakerId": "alex",
+        "start": 1162.5,
+        "end": 1200,
+        "text": "We agree that source-linked navigation is part of the beta, not a later enhancement. Export and live recording can stay outside the capture layer for now. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-33",
+        "speakerId": "yash",
+        "start": 1200,
+        "end": 1237.5,
+        "text": "Let us walk through the access dependencies before we commit to an external integration. Our front end can validate the workflow without sending real issues.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-34",
+        "speakerId": "anya",
+        "start": 1237.5,
+        "end": 1275,
+        "text": "Customer success wants to preview the issue title, description, and owner before it goes into Jira. An incorrect issue creates more work than it saves.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-35",
+        "speakerId": "lily",
+        "start": 1275,
+        "end": 1312.5,
+        "text": "I will own the Jira permission checklist and the transcript import contract. Both are due Friday, October 9, and the draft tracking issue is FAT-142.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-36",
+        "speakerId": "jordan",
+        "start": 1312.5,
+        "end": 1350,
+        "text": "The issue dialog should keep the original action item and its source timestamp visible. Saving a draft must not mark the action complete.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-37",
+        "speakerId": "priya",
+        "start": 1350,
+        "end": 1387.5,
+        "text": "The regression suite will check that a local draft is clearly labeled and that no network request is sent to Jira or to a hosted AI service.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-38",
+        "speakerId": "sam",
+        "start": 1387.5,
+        "end": 1425,
+        "text": "The main risk is a delayed permission review. Sam will document the access boundaries by Thursday, October 8; sharing stays private until approval.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-39",
+        "speakerId": "omar",
+        "start": 1425,
+        "end": 1462.5,
+        "text": "Workspace state should be local to the preview browser. We need to handle unavailable storage without blocking playback, notes, or action status changes.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-40",
+        "speakerId": "alex",
+        "start": 1462.5,
+        "end": 1500,
+        "text": "Decision: validate local Jira drafts first. Connecting a real workspace requires a separate authorized step after the beta review.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-41",
+        "speakerId": "yash",
+        "start": 1500,
+        "end": 1537.5,
+        "text": "Let us walk through the access dependencies before we commit to an external integration. Our front end can validate the workflow without sending real issues. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-42",
+        "speakerId": "anya",
+        "start": 1537.5,
+        "end": 1575,
+        "text": "Customer success wants to preview the issue title, description, and owner before it goes into Jira. An incorrect issue creates more work than it saves. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-43",
+        "speakerId": "lily",
+        "start": 1575,
+        "end": 1612.5,
+        "text": "I will own the Jira permission checklist and the transcript import contract. Both are due Friday, October 9, and the draft tracking issue is FAT-142. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-44",
+        "speakerId": "jordan",
+        "start": 1612.5,
+        "end": 1650,
+        "text": "The issue dialog should keep the original action item and its source timestamp visible. Saving a draft must not mark the action complete. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-45",
+        "speakerId": "priya",
+        "start": 1650,
+        "end": 1687.5,
+        "text": "The regression suite will check that a local draft is clearly labeled and that no network request is sent to Jira or to a hosted AI service. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-46",
+        "speakerId": "sam",
+        "start": 1687.5,
+        "end": 1725,
+        "text": "The main risk is a delayed permission review. Sam will document the access boundaries by Thursday, October 8; sharing stays private until approval. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-47",
+        "speakerId": "omar",
+        "start": 1725,
+        "end": 1762.5,
+        "text": "Workspace state should be local to the preview browser. We need to handle unavailable storage without blocking playback, notes, or action status changes. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["risk", "action"]
+      },
+      {
+        "id": "launch-48",
+        "speakerId": "alex",
+        "start": 1762.5,
+        "end": 1800,
+        "text": "Decision: validate local Jira drafts first. Connecting a real workspace requires a separate authorized step after the beta review. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["risk"]
+      },
+      {
+        "id": "launch-49",
+        "speakerId": "yash",
+        "start": 1800,
+        "end": 1837.5,
+        "text": "We have three useful summary views: a general recap, a sales discovery view, and an engineering hand-off. All three must use the same transcript facts.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-50",
+        "speakerId": "anya",
+        "start": 1837.5,
+        "end": 1875,
+        "text": "The sales template should surface customer needs, open questions, and next steps. It should not invent a budget or a promise that was never said.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-51",
+        "speakerId": "lily",
+        "start": 1875,
+        "end": 1912.5,
+        "text": "The engineering view should show implementation scope and dependencies. Each entry can link back to the original speaker and timestamp.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-52",
+        "speakerId": "jordan",
+        "start": 1912.5,
+        "end": 1950,
+        "text": "Jordan will finish the responsive split-view prototype by Friday. The hierarchy is player, tabbed meeting content, then action items and annotations.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-53",
+        "speakerId": "priya",
+        "start": 1950,
+        "end": 1987.5,
+        "text": "Keyboard users need visible focus, reachable playback controls, and tabs that support arrow keys. Color alone cannot communicate an action status.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-54",
+        "speakerId": "sam",
+        "start": 1987.5,
+        "end": 2025,
+        "text": "Changing a template must not create a new source of truth. The meeting transcript remains the evidence for both the summary and the chat answers.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-55",
+        "speakerId": "omar",
+        "start": 2025,
+        "end": 2062.5,
+        "text": "Audio mode can provide an accessible waveform-style simulation, while retaining elapsed time, seek controls, and the speed setting from video mode.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-56",
+        "speakerId": "alex",
+        "start": 2062.5,
+        "end": 2100,
+        "text": "We agree to ship the three templates with the beta. Empty states and copy-summary feedback are included in the same review.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-57",
+        "speakerId": "yash",
+        "start": 2100,
+        "end": 2137.5,
+        "text": "We have three useful summary views: a general recap, a sales discovery view, and an engineering hand-off. All three must use the same transcript facts. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-58",
+        "speakerId": "anya",
+        "start": 2137.5,
+        "end": 2175,
+        "text": "The sales template should surface customer needs, open questions, and next steps. It should not invent a budget or a promise that was never said. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-59",
+        "speakerId": "lily",
+        "start": 2175,
+        "end": 2212.5,
+        "text": "The engineering view should show implementation scope and dependencies. Each entry can link back to the original speaker and timestamp. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-60",
+        "speakerId": "jordan",
+        "start": 2212.5,
+        "end": 2250,
+        "text": "Jordan will finish the responsive split-view prototype by Friday. The hierarchy is player, tabbed meeting content, then action items and annotations. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-61",
+        "speakerId": "priya",
+        "start": 2250,
+        "end": 2287.5,
+        "text": "Keyboard users need visible focus, reachable playback controls, and tabs that support arrow keys. Color alone cannot communicate an action status. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-62",
+        "speakerId": "sam",
+        "start": 2287.5,
+        "end": 2325,
+        "text": "Changing a template must not create a new source of truth. The meeting transcript remains the evidence for both the summary and the chat answers. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-63",
+        "speakerId": "omar",
+        "start": 2325,
+        "end": 2362.5,
+        "text": "Audio mode can provide an accessible waveform-style simulation, while retaining elapsed time, seek controls, and the speed setting from video mode. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-64",
+        "speakerId": "alex",
+        "start": 2362.5,
+        "end": 2400,
+        "text": "We agree to ship the three templates with the beta. Empty states and copy-summary feedback are included in the same review. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-65",
+        "speakerId": "yash",
+        "start": 2400,
+        "end": 2437.5,
+        "text": "We will evaluate the beta with an eight-person, sixty-minute example and a short discovery call. Both must support the same controls and source links.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-66",
+        "speakerId": "anya",
+        "start": 2437.5,
+        "end": 2475,
+        "text": "Anya will invite the three pilot teams on Monday and collect structured feedback on summary accuracy, search, and action ownership.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-67",
+        "speakerId": "lily",
+        "start": 2475,
+        "end": 2512.5,
+        "text": "The transcript import should reject malformed timestamps before they reach the UI. A row cannot end before it starts or extend past the meeting duration.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-68",
+        "speakerId": "jordan",
+        "start": 2512.5,
+        "end": 2550,
+        "text": "We should test the notes panel with longer descriptions. A timestamp link and the note text must remain readable when the sidebar moves below the player.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-69",
+        "speakerId": "priya",
+        "start": 2550,
+        "end": 2587.5,
+        "text": "Priya will run the playback, speaker-filter, accessibility, and mobile checks on Friday. A search with no matches should offer a clear way to reset filters.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-70",
+        "speakerId": "sam",
+        "start": 2587.5,
+        "end": 2625,
+        "text": "Security review is separate from visual QA. A successful local preview does not establish that a real integration or recording permission is available.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-71",
+        "speakerId": "omar",
+        "start": 2625,
+        "end": 2662.5,
+        "text": "Omar will measure render and search performance on the full-hour fixture. The target is a smooth seek and stable transcript highlighting at every speed.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-72",
+        "speakerId": "alex",
+        "start": 2662.5,
+        "end": 2700,
+        "text": "The beta review will compare the QA evidence and customer feedback before we expand the pilot. We will record remaining blockers explicitly.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-73",
+        "speakerId": "yash",
+        "start": 2700,
+        "end": 2737.5,
+        "text": "We will evaluate the beta with an eight-person, sixty-minute example and a short discovery call. Both must support the same controls and source links. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-74",
+        "speakerId": "anya",
+        "start": 2737.5,
+        "end": 2775,
+        "text": "Anya will invite the three pilot teams on Monday and collect structured feedback on summary accuracy, search, and action ownership. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-75",
+        "speakerId": "lily",
+        "start": 2775,
+        "end": 2812.5,
+        "text": "The transcript import should reject malformed timestamps before they reach the UI. A row cannot end before it starts or extend past the meeting duration. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-76",
+        "speakerId": "jordan",
+        "start": 2812.5,
+        "end": 2850,
+        "text": "We should test the notes panel with longer descriptions. A timestamp link and the note text must remain readable when the sidebar moves below the player. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-77",
+        "speakerId": "priya",
+        "start": 2850,
+        "end": 2887.5,
+        "text": "Priya will run the playback, speaker-filter, accessibility, and mobile checks on Friday. A search with no matches should offer a clear way to reset filters. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-78",
+        "speakerId": "sam",
+        "start": 2887.5,
+        "end": 2925,
+        "text": "Security review is separate from visual QA. A successful local preview does not establish that a real integration or recording permission is available. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-79",
+        "speakerId": "omar",
+        "start": 2925,
+        "end": 2962.5,
+        "text": "Omar will measure render and search performance on the full-hour fixture. The target is a smooth seek and stable transcript highlighting at every speed. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["discussion", "action"]
+      },
+      {
+        "id": "launch-80",
+        "speakerId": "alex",
+        "start": 2962.5,
+        "end": 3000,
+        "text": "The beta review will compare the QA evidence and customer feedback before we expand the pilot. We will record remaining blockers explicitly. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["discussion"]
+      },
+      {
+        "id": "launch-81",
+        "speakerId": "yash",
+        "start": 3000,
+        "end": 3037.5,
+        "text": "Let us confirm our decisions: Monday beta review, private sharing, source-linked notes, and local Jira drafts until permissions are approved. Priya will verify the export workflow tomorrow; this is urgent.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-82",
+        "speakerId": "anya",
+        "start": 3037.5,
+        "end": 3075,
+        "text": "I own pilot invitations and feedback collection. The success signal is whether someone outside the original call can understand the agreed next steps.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-83",
+        "speakerId": "lily",
+        "start": 3075,
+        "end": 3112.5,
+        "text": "I own transcript import and the Jira permission checklist. FAT-142 is the draft reference, and Friday is the implementation checkpoint.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-84",
+        "speakerId": "jordan",
+        "start": 3112.5,
+        "end": 3150,
+        "text": "I own the split-view prototype, mobile layout, and note navigation. The action status controls should make progress obvious without hiding completed work.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-85",
+        "speakerId": "priya",
+        "start": 3150,
+        "end": 3187.5,
+        "text": "I own Friday QA for playback, citations, filter resets, and keyboard interaction. I will keep the hour-long case in the same test suite.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-86",
+        "speakerId": "sam",
+        "start": 3187.5,
+        "end": 3225,
+        "text": "I own the Thursday access review. The remaining blocker is Jira authorization, so no external issue creation is promised in the local beta.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-87",
+        "speakerId": "omar",
+        "start": 3225,
+        "end": 3262.5,
+        "text": "I own long-meeting performance and storage fallback behavior. If local storage is unavailable, the page still needs to operate in memory.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-88",
+        "speakerId": "alex",
+        "start": 3262.5,
+        "end": 3300,
+        "text": "Alex will circulate the review agenda with the owners and deadlines. Thanks everyone; the annotated transcript is ready for follow-up.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-89",
+        "speakerId": "yash",
+        "start": 3300,
+        "end": 3337.5,
+        "text": "Let us confirm our decisions: Monday beta review, private sharing, source-linked notes, and local Jira drafts until permissions are approved. Follow-up: We will keep that commitment attached to this source so the team can verify the context later.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-90",
+        "speakerId": "anya",
+        "start": 3337.5,
+        "end": 3375,
+        "text": "I own pilot invitations and feedback collection. The success signal is whether someone outside the original call can understand the agreed next steps. Follow-up: I will bring feedback from the pilot group into the next review, with examples rather than general impressions.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-91",
+        "speakerId": "lily",
+        "start": 3375,
+        "end": 3412.5,
+        "text": "I own transcript import and the Jira permission checklist. FAT-142 is the draft reference, and Friday is the implementation checkpoint. Follow-up: Let us keep the ownership and dependency clear in the action list before closing this topic.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-92",
+        "speakerId": "jordan",
+        "start": 3412.5,
+        "end": 3450,
+        "text": "I own the split-view prototype, mobile layout, and note navigation. The action status controls should make progress obvious without hiding completed work. Follow-up: The design review will use both the compact and desktop layouts to check that this information stays visible.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-93",
+        "speakerId": "priya",
+        "start": 3450,
+        "end": 3487.5,
+        "text": "I own Friday QA for playback, citations, filter resets, and keyboard interaction. I will keep the hour-long case in the same test suite. Follow-up: This becomes a specific regression check alongside the seek, transcript, and source-citation cases.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-94",
+        "speakerId": "sam",
+        "start": 3487.5,
+        "end": 3525,
+        "text": "I own the Thursday access review. The remaining blocker is Jira authorization, so no external issue creation is promised in the local beta. Follow-up: We will review the permission boundary before authorizing any real external action.",
+        "tags": ["decision"]
+      },
+      {
+        "id": "launch-95",
+        "speakerId": "omar",
+        "start": 3525,
+        "end": 3562.5,
+        "text": "I own long-meeting performance and storage fallback behavior. If local storage is unavailable, the page still needs to operate in memory. Follow-up: I will test the same behavior with all speakers visible and again with one speaker selected.",
+        "tags": ["decision", "action"]
+      },
+      {
+        "id": "launch-96",
+        "speakerId": "alex",
+        "start": 3562.5,
+        "end": 3600,
+        "text": "Alex will circulate the review agenda with the owners and deadlines. Thanks everyone; the annotated transcript is ready for follow-up. Follow-up: I have added this topic to the Monday review agenda so the decision has a clear checkpoint.",
+        "tags": ["decision"]
+      }
+    ],
+    "chapters": [
+      {
+        "time": 0,
+        "title": "Launch goals & outcomes"
+      },
+      {
+        "time": 600,
+        "title": "Transcript quality & playback"
+      },
+      {
+        "time": 1200,
+        "title": "Security & integration permissions"
+      },
+      {
+        "time": 1800,
+        "title": "Design & summary templates"
+      },
+      {
+        "time": 2400,
+        "title": "Customer pilot & QA"
+      },
+      {
+        "time": 3000,
+        "title": "Final decisions & owners"
+      }
+    ],
+    "summary": {
+      "overview": "Eight teammates reviewed the October beta, transcript quality, security dependencies, summary templates, and pilot readiness. The team agreed to a private beta review on Monday, October 12.",
+      "highlights": [
+        {
+          "text": "Validate the same workspace controls on a short call and an eight-person, one-hour fixture.",
+          "time": 2400
+        },
+        {
+          "text": "Keep timestamps and speaker context attached to summaries, notes, and next steps.",
+          "time": 600
+        },
+        {
+          "text": "Offer general, sales, and engineering summary templates grounded in the transcript.",
+          "time": 1800
+        }
+      ],
+      "decisions": [
+        {
+          "text": "Review the beta on Monday, October 12 before expanding the private pilot.",
+          "time": 262.5
+        },
+        {
+          "text": "Use local Jira drafts until the separate permissions review is approved.",
+          "time": 1462.5
+        }
+      ],
+      "risks": [
+        {
+          "text": "Jira authorization may delay the real integration; private sharing remains the default.",
+          "time": 1387.5
+        }
+      ],
+      "templates": {
+        "sales": [
+          {
+            "title": "Customer need",
+            "text": "Pilot teams need accurate owners, searchable promises, and context for teammates who missed the call.",
+            "time": 37.5
+          },
+          {
+            "title": "Next steps",
+            "text": "Anya owns Monday pilot invitations and structured feedback on search and summary accuracy.",
+            "time": 2437.5
+          }
+        ],
+        "engineering": [
+          {
+            "title": "Scope",
+            "text": "Timestamped playback, source-linked summaries, speaker filters, and responsive notes.",
+            "time": 600
+          },
+          {
+            "title": "Dependencies",
+            "text": "Lily owns transcript import and Jira permissions; Omar owns long-meeting performance.",
+            "time": 1275
+          }
+        ]
+      }
+    },
+    "actionItems": [
+      {
+        "id": "l1",
+        "text": "Prepare transcript import and Jira permissions checklist",
+        "speakerId": "lily",
+        "due": "Fri, Oct 9",
+        "status": "in-progress",
+        "time": 1275,
+        "jira": {
+          "key": "FAT-142",
+          "project": "FAT",
+          "status": "In progress"
+        },
+        "ownerId": "lily",
+        "assignedById": "lily",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday, October 9",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l2",
+        "text": "Finish responsive prototype and note navigation",
+        "speakerId": "jordan",
+        "due": "Fri, Oct 9",
+        "status": "todo",
+        "time": 1912.5,
+        "jira": null,
+        "ownerId": "jordan",
+        "assignedById": "jordan",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l3",
+        "text": "Run playback, citation, keyboard, and mobile QA",
+        "speakerId": "priya",
+        "due": "Fri, Oct 9",
+        "status": "todo",
+        "time": 2550,
+        "jira": {
+          "key": "FAT-143",
+          "project": "FAT",
+          "status": "To do"
+        },
+        "ownerId": "priya",
+        "assignedById": "priya",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Friday",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l4",
+        "text": "Document access boundaries and Jira authorization",
+        "speakerId": "sam",
+        "due": "Thu, Oct 8",
+        "status": "todo",
+        "time": 1387.5,
+        "jira": null,
+        "ownerId": "sam",
+        "assignedById": "sam",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Thursday, October 8",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l5",
+        "text": "Measure full-hour transcript search and seek performance",
+        "speakerId": "omar",
+        "due": "Fri, Oct 9",
+        "status": "todo",
+        "time": 2625,
+        "jira": null,
+        "ownerId": "omar",
+        "assignedById": "omar",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l6",
+        "text": "Invite pilot teams and collect summary feedback",
+        "speakerId": "anya",
+        "due": "Mon, Oct 12",
+        "status": "todo",
+        "time": 2437.5,
+        "jira": null,
+        "ownerId": "anya",
+        "assignedById": "anya",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "Monday",
+        "priority": "Medium",
+        "prioritySuggested": true
+      },
+      {
+        "id": "l7",
+        "text": "Verify the export workflow",
+        "ownerId": "priya",
+        "assignedById": "yash",
+        "speakerId": "yash",
+        "ownerSuggestion": null,
+        "ownerSuggested": false,
+        "duePhrase": "tomorrow",
+        "due": "tomorrow",
+        "priority": "High",
+        "prioritySuggested": true,
+        "status": "todo",
+        "time": 3000,
+        "jira": null
+      }
+    ],
+    "annotations": [
+      {
+        "id": "ln1",
+        "type": "note",
+        "time": 19,
+        "speakerId": "yash",
+        "text": "Private beta first. Keep commitments linked to their original conversation."
+      },
+      {
+        "id": "ln2",
+        "type": "decision",
+        "time": 262.5,
+        "speakerId": "alex",
+        "text": "Monday, October 12 is the beta review checkpoint."
+      },
+      {
+        "id": "ln3",
+        "type": "risk",
+        "time": 1387.5,
+        "speakerId": "sam",
+        "text": "Jira permission review is the remaining integration dependency."
+      },
+      {
+        "id": "ln4",
+        "type": "note",
+        "time": 1912.5,
+        "speakerId": "jordan",
+        "text": "Review responsive player, notes, and transcript layout together."
+      },
+      {
+        "id": "ln5",
+        "type": "decision",
+        "time": 3000,
+        "speakerId": "yash",
+        "text": "Confirm the owners, private sharing, source links, and local Jira draft workflow."
+      }
+    ],
+    "timeZone": "Asia/Karachi"
+  }
+]
