@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/signup", "destination": "/auth.html" },
+    { "source": "/login", "destination": "/auth.html" },
+    { "source": "/dashboard", "destination": "/auth.html" },
+    { "source": "/app", "destination": "/auth.html" },
+    { "source": "/meetings", "destination": "/meeting.html" },
+    { "source": "/meetings/:path*", "destination": "/meeting.html" }
+  ]
+}
