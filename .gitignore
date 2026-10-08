@@ -2,3 +2,15 @@
 .recon-runtime/
 .sites-runtime/
 node_modules/
+
+# Environment files and generated build output
+.env
+.env.*
+.next/
+dist/
+build/
+out/
+
+# Assignment session logs must remain eligible for version control.
+!.agent-logs/
+!.agent-logs/**

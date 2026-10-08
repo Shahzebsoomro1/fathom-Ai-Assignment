@@ -15,8 +15,9 @@ local dashboard destination at `/dashboard`. Google and Microsoft buttons show a
 history/state switch. Sign-in/sign-up links and browser Back keep the form in sync.
 SSO is simulated: no real provider account, calendar, credential, or token is used.
 
-All remaining development is local only. Do not deploy, publish, or push updates to
-the existing hosted preview. That preview predates the user's local-only instruction.
+Development and browser previews remain local. The user has authorized GitHub
+source submission after reviewing and approving the pending commit. Website
+deployment and changes to the existing hosted preview remain disabled.
 
 ## Run locally
 
@@ -39,6 +40,14 @@ Both provider buttons navigate to http://127.0.0.1:4173/dashboard.
 The landing/auth source and compiled meeting workspace are in `dist/`.
 Modular meeting components, hooks, JSON fixtures, and styles live in
 `frontend/meeting/`. `frontend/server.mjs` provides the local development server.
+The existing `dist/` files are tracked because this directory also contains the
+landing/auth source and reference assets. Ignore rules exclude new build output;
+they do not remove these existing tracked files. No environment variables or
+external API credentials are required for the simulated frontend.
+
+The submission includes the root `.agent-logs/` capture files. See
+`CODE-REVIEW.md` for the latest review findings and verification limits; the
+security/ignore-file preparation does not resolve those functional findings.
 
 ## Verification
 
